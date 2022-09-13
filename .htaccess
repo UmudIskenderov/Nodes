@@ -1,0 +1,6 @@
+<IfModule mod_headers.c>
+Header set Content-Control "no-cache, no-store, must-revalidate"
+Header set Expires "Sun, 01 Jan 1981 01:00:00GMT"
+Header set Pragma "no-cahche"
+</IfModule>
+ErrorDocument 404 http://localhost/NM/404.html
