@@ -2,7 +2,7 @@
 <script src="js/jquery-3.6.1.min.js"></script>
 <script src="js/baguetteBox.min.js"></script>
 <script>
-    var SITE_URL = "http://localhost/NM";
+    var SITE_URL = "http://localhost/NOTES-MANAGEMENT-MAIN";
     baguetteBox.run('.photoGallery');
     function Signin(FormID, Operation) {
         $(".myload").html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
