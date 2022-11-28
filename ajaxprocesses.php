@@ -328,7 +328,7 @@ switch ($operation) {
         $kriptoID = $_GET['KriptoID'];
         if ($_SESSION["LogedIn"] == true && md5(md5(md5(sha1($_SESSION["ID"])))) == $kriptoID) {
             $userstatus = $db->getColumn("SELECT UserStatus FROM users WHERE UserID=?", array($userID));
-            if ($_SERVER["HTTP_REFERER"] == "http://localhost/NM/admin.php?UserID=$kriptoID") {
+            if ($_SERVER["HTTP_REFERER"] == "http://localhost/NOTES-MANAGEMENT-MAIN/admin.php?UserID=$kriptoID") {
                 if ($userstatus == 1) {
                     $edit = $db->Update("UPDATE users SET UserStatus=? WHERE UserID=?", array(0, $userID));
                     if ($edit) {
@@ -346,7 +346,7 @@ switch ($operation) {
                         $data['warning'] = 'an error occurred';
                     }
                 }
-            } elseif ($_SERVER["HTTP_REFERER"] == "http://localhost/NM/exercise.php?UserID=$kriptoID") {
+            } elseif ($_SERVER["HTTP_REFERER"] == "http://localhost/NOTES-MANAGEMENT-MAIN/exercise.php?UserID=$kriptoID") {
                 if ($userstatus == 1) {
                     $edit = $db->Update("UPDATE users SET UserStatus=? WHERE UserID=?", array(0, $userID));
                     if ($edit) {
